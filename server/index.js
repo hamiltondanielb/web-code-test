@@ -7,7 +7,6 @@
     var app = express();
     var port = process.env.PORT || 3000;
 
-
     app.use(express.static(path.resolve(__dirname, '../client')));
 
     app.listen(port, function () {
@@ -69,9 +68,8 @@
     app.get('/mockups', function (req, res) {
         res.sendFile('index.html', {root: path.join(__dirname, '../client/mockups')});
     });
-
+    
     app.get('/', function (req, res) {
-        res.sendFile('index.html');
+        res.sendFile('index.html' );
     });
-
 }());
